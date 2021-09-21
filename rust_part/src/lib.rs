@@ -1,13 +1,10 @@
-// src/main.rs
-
-//#![no_main] // main defined in C++ by main.cc
-
 use cxx::CxxString;
 use std::io::{self, Write};
 use std::pin::Pin;
 
 #[cxx::bridge]
 mod ffi {
+    #[namespace = "rust_part"]
     extern "Rust" {
         fn prettify_json(input: &[u8], output: Pin<&mut CxxString>) -> Result<()>;
     }
@@ -32,3 +29,4 @@ fn prettify_json(input: &[u8], output: Pin<&mut CxxString>) -> serde_json::Resul
     let mut serializer = serde_json::Serializer::pretty(writer);
     serde_transcode::transcode(&mut deserializer, &mut serializer)
 }
+

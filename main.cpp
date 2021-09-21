@@ -1,6 +1,4 @@
-
-#include "lib.rs.h"
-
+#include "rust_part.h"
 #include <iostream>
 #include <iterator>
 #include <string>
@@ -15,7 +13,7 @@ int main()
 
   // Prettify using serde_json and serde_transcode.
   std::string output;
-  prettify_json(slice, output);
+  rust_part::prettify_json(slice, output);
 
   // Write to stdout.
   std::cout << output << std::endl;

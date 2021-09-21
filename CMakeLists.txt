@@ -1,15 +1,13 @@
-cmake_minimum_required(VERSION 3.9 FATAL_ERROR)
-project(cpp-example)
+project(cxx_example)
+cmake_minimum_required(VERSION 3.15)
 
-#include(CheckIncludeFileCXX)
+set (CMAKE_CXX_STANDARD 17)
 
-#set(CMAKE_CXX_STANDARD 17)
-#set(CMAKE_CXX_STANDARD_REQUIRED True)
-#set(CMAKE_CXX_EXTENSIONS False)
+include_directories(${CMAKE_BINARY_DIR}/rust_part)
+#include_directories(include)
 
-#set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
+add_subdirectory(rust_part)
 
-include_directories(${CMAKE_SOURCE_DIR}/src)
+add_executable(app main.cpp)
 
-add_executable(app ${CMAKE_SOURCE_DIR}/src/main.cpp)
-target_link_libraries(app ${CMAKE_SOURCE_DIR}/target/debug/libcxx_rust.a -Wl,--allow-multiple-definition -ldl -lpthread)
+target_link_libraries(app rust_part)

@@ -1,17 +1,17 @@
 [package]
-name = "cxx-rust"
+name = "rust_part"
 edition = "2018"
 version = "0.1.0"
 authors = ["Michał Hanusek <mhanusek@o2.pl>"]
 
 [dependencies]
-cxx = "*"
+cxx = "1.0"
 serde = { version = "1", features = ["derive"] }
 serde_json = "*"
 serde-transcode = "*"
 
-#[build-dependencies]
-#cxx-build = "1.0"
+[build-dependencies]
+cxx-build = "1.0"
 
 [lib]
 crate-type = ["staticlib"]
