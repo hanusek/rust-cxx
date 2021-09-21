@@ -1,0 +1,17 @@
+[package]
+name = "cxx-rust"
+edition = "2018"
+version = "0.1.0"
+authors = ["Michał Hanusek <mhanusek@o2.pl>"]
+
+[dependencies]
+cxx = "*"
+serde = { version = "1", features = ["derive"] }
+serde_json = "*"
+serde-transcode = "*"
+
+#[build-dependencies]
+#cxx-build = "1.0"
+
+[lib]
+crate-type = ["staticlib"]
