@@ -5,6 +5,7 @@ version = "0.1.0"
 authors = ["Michał Hanusek <mhanusek@o2.pl>"]
 license = "MIT"
 description = "The example bindings rust->cpp"
+repository = "https://github.com/hanusek/rust-cxx"
 
 [dependencies]
 cxx = "1.0"
