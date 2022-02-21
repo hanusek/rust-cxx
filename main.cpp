@@ -1,11 +1,14 @@
-#include "rust_part.h"
 #include <iostream>
 #include <iterator>
 #include <string>
 #include <vector>
 
+#include "rust_part.h"
+
 int main() 
 {
+  std::cout << "prettify_json application" << std::endl;
+
   // Read json from stdin.
   std::istreambuf_iterator<char> begin{std::cin}, end;
   std::vector<unsigned char> input{begin, end};

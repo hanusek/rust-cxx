@@ -1,14 +1,8 @@
+mod bindings;
+
 use cxx::CxxString;
 use std::io::{self, Write};
 use std::pin::Pin;
-
-#[cxx::bridge]
-mod ffi {
-    #[namespace = "rust_part"]
-    extern "Rust" {
-        fn prettify_json(input: &[u8], output: Pin<&mut CxxString>) -> Result<()>;
-    }
-}
 
 struct WriteToCxxString<'a>(Pin<&'a mut CxxString>);
 

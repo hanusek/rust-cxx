@@ -1,5 +1,5 @@
 [package]
-name = "rust_part"
+name = "rust_part_rs"
 edition = "2018"
 version = "0.1.0"
 authors = ["Michał Hanusek <mhanusek@o2.pl>"]

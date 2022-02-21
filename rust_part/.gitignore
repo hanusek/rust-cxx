@@ -1,2 +1,6 @@
 /target
 Cargo.lock
+rust_part.cpp
+rust_part.h
+src/bindings.rs
+.vscode
