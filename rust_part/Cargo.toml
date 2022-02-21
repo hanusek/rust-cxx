@@ -9,9 +9,9 @@ repository = "https://github.com/hanusek/rust-cxx"
 
 [dependencies]
 cxx = "1.0"
-serde = { version = "1", features = ["derive"] }
-serde_json = "*"
-serde-transcode = "*"
+serde = { version = "1.0.136", features = ["derive"] }
+serde_json = "1.0.79"
+serde-transcode = "1.1.1"
 
 [build-dependencies]
 cxx-build = "1.0"
